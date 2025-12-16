@@ -162,7 +162,7 @@ describe('useCepHistory', () => {
       originalSetItem(key, value);
     });
 
-    const { result } = renderHook(() => useCepHistory());
+    const { result } = renderHook(() => useCepHistory(), { wrapper });
 
     act(() => {
       result.current.addToHistory(mockAddress);
